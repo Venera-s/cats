@@ -58,6 +58,6 @@
     "source/js/*.js"
   ],
   "engines": {
-    "node": "17"
+    "node": "14"
   }
 }
