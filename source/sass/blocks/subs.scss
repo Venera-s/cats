@@ -1,0 +1,11 @@
+.subs {
+  margin-bottom: 114px;
+
+  @include viewport--md {
+    margin-bottom: 90px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 70px;
+  }
+}

@@ -1,0 +1,103 @@
+.catalog {
+  padding-top: 37px;
+  padding-bottom: 37px;
+}
+
+.catalog__list {
+  @include reset-list;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  // gap: 27px 30px;
+  margin-right: -20px;
+  padding-bottom: 68px;
+}
+
+.catalog__item {
+  width: calc(33% - 20px);
+  margin-right: 20px;
+  margin-bottom: 30px;
+
+  @include viewport--lg {
+    width: calc(50% - 20px);
+  }
+
+  @include viewport--sm {
+    width: calc(100% - 20px);
+  }
+}
+
+.catalog__filter-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 37px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.catalog__filter {
+  @include reset-indents;
+  padding-right: 55px;
+
+  @include viewport--md {
+    padding-bottom: 0;
+    z-index: -10;
+  }
+
+  @include viewport--sm {
+    padding-bottom: 15px;
+  }
+
+  &--btn {
+    position: relative;
+    margin-right: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 25px;
+      width: 15px;
+      height: 15px;
+      fill: black;
+      background: url("../../img/arrow.svg") 0 0 no-repeat;
+
+      @include viewport--sm {
+        top: 3px;
+      }
+    }
+  }
+
+  &--sort {
+    font-weight: 700;
+  }
+}
+
+.catalog__more {
+  display: block;
+  width: 380px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: $color-black;
+  border: 1px solid $color-very-light-grey;
+  border-radius: 10px;
+
+  @include viewport--sm {
+    width: 280px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

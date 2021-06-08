@@ -1,0 +1,24 @@
+.btn {
+  padding-bottom: 50px;
+}
+
+.btn__up {
+  display: block;
+  width: 59px;
+  height: 59px;
+  padding: 0;
+  margin-left: auto;
+  background: url("../../img/arrow-up.svg") 50% 50% no-repeat;
+  background-color: $color-seagull;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

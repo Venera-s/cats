@@ -1,0 +1,177 @@
+.subscription {
+  display: flex;
+  column-gap: 54px;
+  padding: 83px 80px;
+  color: $color-white;
+  background-color: $color-black-pearl;
+
+  @include viewport--lg {
+    column-gap: 50px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+
+  @include viewport--md {
+    flex-direction: column;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  @include viewport--sm {
+    column-gap: 0;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.subscription__wrap {
+  width: 422px;
+
+  @include viewport--md {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 45px;
+  }
+}
+
+.subscription__info {
+  @include reset-indents;
+
+  &--title {
+    padding-bottom: 26px;
+    font-size: 48px;
+    line-height: 59px;
+
+    @include viewport--sm {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &--text {
+    font-size: 28px;
+    line-height: 26px;
+
+    @include viewport--sm {
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+}
+
+.subscription__form {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 570px;
+  margin-left: auto;
+
+  @include viewport--md {
+    margin: 0 auto;
+  }
+
+  @include viewport--sm {
+    width: 252px;
+    margin: 0 auto;
+  }
+}
+
+.subscription__input {
+  display: block;
+  width: 300px;
+  margin-right: 16px;
+  padding: 21px 33px;
+  font-size: 14px;
+  line-height: 17px;
+  border: none;
+  border-radius: 10px;
+
+  @include viewport--lg {
+    width: 250px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  @include viewport--md {
+    width: 300px;
+    margin-bottom: 15px;
+    padding-right: 33px;
+    padding-left: 33px;
+  }
+
+  @include viewport--sm {
+    margin-right: 0;
+  }
+
+  &::placeholder {
+    color: $color-black;
+  }
+}
+
+.subscription__btn {
+  display: block;
+  width: 250px;
+  padding: 23px;
+  text-align: center;
+  background-color: $color-seagull;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+
+  @include viewport--lg {
+    width: 200px;
+  }
+
+  @include viewport--md {
+    width: 250px;
+  }
+
+  @include viewport--sm {
+    margin-bottom: 15px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.subscription__label {
+  padding: 5px 5px 5px 25px;
+}
+
+.subscription__checkbox + .subscription__label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12%;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-color: $color-seagull;
+    border-radius: 3px;
+  }
+}
+
+.subscription__checkbox:checked + .subscription__label {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    width: 10px;
+    height: 10px;
+    background: url("../../img/check.svg") 0 0 no-repeat;
+  }
+}
